@@ -31,3 +31,29 @@ for (int i = 0; i < 5; i++)
     totalGeneral += subtotales[i];
 
 }
+// Resumen
+Console.WriteLine(" === RESUMEN DEL PEDIDO ===       ");
+
+Console.WriteLine($"Cliente: {nombreCliente}\n");
+
+// Encabezado de tabla
+Console.WriteLine("{0,-15} {1,-10} {2,-10} {3,-10}",
+    "Producto", "Cantidad", "Precio", "Subtotal");
+
+Console.WriteLine("--------------------------------------");
+
+// Mostrar cada producto
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine("{0,-15} {1,-10} {2,-10:F2} {3,-10:F2}",
+        productos[i],
+        cantidades[i],
+        precios[i],
+        subtotales[i]);
+}
+
+Console.WriteLine("--------------------------------------");
+// Total general
+Console.WriteLine($"TOTAL GENERAL: {totalGeneral:F2}");
+Console.WriteLine("======================================");
+Console.WriteLine("Gracias por su compra :)");
