@@ -18,4 +18,16 @@ for (int i = 0; i < 5; i++)
     Console.Write("Nombre del producto: ");
     productos[i] = Console.ReadLine();
 
+    Console.Write("Cantidad: ");
+    cantidades[i] = int.Parse(Console.ReadLine());
+
+    Console.Write("Precio: ");
+    precios[i] = double.Parse(Console.ReadLine());
+
+    // Cálculo del subtotal
+    subtotales[i] = cantidades[i] * precios[i];
+
+    // total
+    totalGeneral += subtotales[i];
+
 }
